@@ -500,14 +500,14 @@ function App() {
                       className="w-100" 
                       onClick={() => {
                         const message = encodeURIComponent(
-                          `Olá, desejo finalizar a seguinte compra:\n\n` +
+                          `Olá, gostaria de falar sobre os seguintes itens no meu carrinho:\n\n` +
                           cart.map(item => `- ${item.name} (Quantidade: ${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`).join('\n') +
-                          `\n\nSubtotal: R$ ${cartTotal.toFixed(2)}\n\nDesejo finalizar essa compra.`
+                          `\n\nSubtotal: R$ ${cartTotal.toFixed(2)}\n\nAguardo seu retorno.`
                         );
                         window.open(`https://wa.me/5585992795965?text=${message}`, '_blank');
                       }}
                     >
-                      Finalizar Compra
+                      Falar com o Vendedor
                     </Button>
                   </Col>
                 </Row>
