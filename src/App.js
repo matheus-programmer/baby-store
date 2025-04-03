@@ -304,6 +304,7 @@ function App() {
             <hr className="my-4" />
             <div className="text-center">
               <p>&copy; 2025 BabyStore - Todos os direitos reservados</p>
+              <p>Desenvolvido por Maria Ariel e Matheus Medeiros</p>
             </div>
           </Container>
         </footer>
@@ -494,7 +495,18 @@ function App() {
                       <span className="fw-bold">Total:</span>
                       <span className="fw-bold">R$ {cartTotal.toFixed(2)}</span>
                     </div>
-                    <Button variant="primary" className="w-100" onClick={() => setShowLoginModal(true)}>
+                    <Button 
+                      variant="primary" 
+                      className="w-100" 
+                      onClick={() => {
+                        const message = encodeURIComponent(
+                          `Olá, desejo finalizar a seguinte compra:\n\n` +
+                          cart.map(item => `- ${item.name} (Quantidade: ${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`).join('\n') +
+                          `\n\nSubtotal: R$ ${cartTotal.toFixed(2)}\n\nDesejo finalizar essa compra.`
+                        );
+                        window.open(`https://wa.me/5585992795965?text=${message}`, '_blank');
+                      }}
+                    >
                       Finalizar Compra
                     </Button>
                   </Col>
