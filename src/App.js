@@ -16,6 +16,10 @@ function App() {
   // State for cart
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
+
+  // State for shipping calculation
+  const [cepDestino, setCepDestino] = useState('');
+  const [frete, setFrete] = useState(0);
   
   // Sample products data
   const products = [
@@ -86,6 +90,29 @@ function App() {
 
   // Function to calculate cart total
   const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+
+  // Function to calculate shipping cost
+  const calcularFrete = (cepDestino) => {
+    const regioes = [
+      { faixa: /^60/, custoBase: 10 }, // Região de Fortaleza
+      { faixa: /^61|62|63/, custoBase: 20 }, // Região Nordeste
+      { faixa: /^7/, custoBase: 30 }, // Região Centro-Oeste
+      { faixa: /^8/, custoBase: 40 }, // Região Sudeste
+      { faixa: /^9/, custoBase: 50 }, // Região Sul
+    ];
+
+    const pesoTotal = cart.reduce((total, item) => total + item.quantity, 0); // Peso total baseado na quantidade de itens
+    const regiao = regioes.find(r => r.faixa.test(cepDestino));
+
+    if (!regiao) {
+      alert('CEP inválido ou fora da área de entrega.');
+      return;
+    }
+
+    const custoFrete = regiao.custoBase + pesoTotal * 5; // Exemplo: R$5 por kg
+    setFrete(custoFrete);
+    alert(`O valor do frete para o CEP ${cepDestino} é R$ ${custoFrete.toFixed(2)}`);
+  };
 
   return (
     <Router>
@@ -481,6 +508,24 @@ function App() {
                   </Row>
                 ))}
                 <hr />
+                <Form className="mb-3">
+                  <Form.Group>
+                    <Form.Label>Calcular Frete</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Digite seu CEP"
+                      value={cepDestino}
+                      onChange={(e) => setCepDestino(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Button
+                    variant="primary"
+                    className="mt-2"
+                    onClick={() => calcularFrete(cepDestino)}
+                  >
+                    Calcular Frete
+                  </Button>
+                </Form>
                 <Row className="justify-content-end">
                   <Col md={6}>
                     <div className="d-flex justify-content-between mb-2">
@@ -489,11 +534,11 @@ function App() {
                     </div>
                     <div className="d-flex justify-content-between mb-2">
                       <span>Frete:</span>
-                      <span>Calculado no checkout</span>
+                      <span>R$ {frete.toFixed(2)}</span>
                     </div>
                     <div className="d-flex justify-content-between mb-3">
                       <span className="fw-bold">Total:</span>
-                      <span className="fw-bold">R$ {cartTotal.toFixed(2)}</span>
+                      <span className="fw-bold">R$ {(cartTotal + frete).toFixed(2)}</span>
                     </div>
                     <Button 
                       variant="primary" 
@@ -502,7 +547,11 @@ function App() {
                         const message = encodeURIComponent(
                           `Olá, gostaria de falar sobre os seguintes itens no meu carrinho:\n\n` +
                           cart.map(item => `- ${item.name} (Quantidade: ${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`).join('\n') +
-                          `\n\nSubtotal: R$ ${cartTotal.toFixed(2)}\n\nAguardo seu retorno.`
+                          `\n\nSubtotal: R$ ${cartTotal.toFixed(2)}` +
+                          `\nFrete: R$ ${frete.toFixed(2)}` +
+                          `\nTotal com Frete: R$ ${(cartTotal + frete).toFixed(2)}` +
+                          `\nCEP de Entrega: ${cepDestino}` +
+                          `\n\nAguardo seu retorno.`
                         );
                         window.open(`https://wa.me/5585992795965?text=${message}`, '_blank');
                       }}
