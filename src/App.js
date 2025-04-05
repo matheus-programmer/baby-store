@@ -27,7 +27,7 @@ function App() {
       id: 1,
       name: 'Conjunto Bebê Branco',
       price: 89.90,
-      image: `${process.env.PUBLIC_URL}/produto_1.jpg`,
+      image: `${process.env.PUBLIC_URL}/produto_1.jpeg`,
       description: 'Conjunto confortável de algodão 100% para bebês recém-nascidos.'
     },
     {
