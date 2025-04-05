@@ -34,14 +34,14 @@ function App() {
       id: 2,
       name: 'Manta Rosa com Bolinhas',
       price: 69.90,
-      image: 'https://picsum.photos/300/300?random=2',
+      image: `${process.env.PUBLIC_URL}/produto_2.jpeg`,
       description: 'Manta macia de algodão com estampa de bolinhas para bebês.'
     },
     {
       id: 3,
       name: 'Kit Berço Completo',
       price: 299.90,
-      image: 'https://picsum.photos/300/300?random=3',
+      image: `${process.env.PUBLIC_URL}/produto_3.jpeg`,
       description: 'Kit completo para berço com protetor, lençol e fronha.'
     },
     {
