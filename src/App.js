@@ -166,7 +166,7 @@ function App() {
               <img
                 src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
                 alt="Bebê a Bordo"
-                style={{ width: '100px', height: '100px', marginRight: '10px', borderRadius: '50%' }} // Estilo da logo
+                style={{ width: '70px', height: '70px', marginRight: '10px', borderRadius: '50%' }} // Estilo da logo
               />
               Bebê a Bordo
             </Navbar.Brand>
