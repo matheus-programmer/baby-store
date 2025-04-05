@@ -301,7 +301,7 @@ function App() {
               </Col>
               <Col md={6}>
                 <img 
-                  src={`${process.env.PUBLIC_URL}/sobre_nos.`} 
+                  src={`${process.env.PUBLIC_URL}/sobre_nos.jpeg`} 
                   alt="Nossa História" 
                   className="img-fluid rounded" 
                 />
