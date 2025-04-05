@@ -176,7 +176,12 @@ function App() {
         {/* Main Content */}
         <Container>
           {/* Featured Info Section */}
-          <section className="mb-5 bg-light p-4 rounded">
+          <section
+            className="mb-5 p-4 rounded"
+            style={{
+              backgroundColor: '#FDEEF4', // Cor de fundo aplicada
+            }}
+          >
             <Row>
               <Col md={4} className="text-center mb-3 mb-md-0">
                 <div className="feature-icon mb-2">
@@ -268,7 +273,12 @@ function App() {
           </section>
 
           {/* Newsletter Section */}
-          <section className="mb-5 bg-light p-4 rounded">
+          <section
+            className="mb-5 p-4 rounded"
+            style={{
+              backgroundColor: '#FDEEF4', // Cor de fundo aplicada
+            }}
+          >
             <Row className="align-items-center">
               <Col md={6}>
                 <h4>Receba Nossas Novidades</h4>
