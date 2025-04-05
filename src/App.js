@@ -155,7 +155,7 @@ function App() {
         </Carousel>
 
         {/* Navbar */}
-        <Navbar bg="light" expand="lg" sticky="top" className="mb-4">
+        <Navbar style={{ backgroundColor: '#ADD8E6' }} expand="lg" sticky="top" className="mb-4">
           <Container>
             <Navbar.Brand href="#home">
               <img
@@ -307,7 +307,7 @@ function App() {
         </Container>
 
         {/* Footer */}
-        <footer id="footer" className="bg-dark text-white p-4">
+        <footer id="footer" style={{ backgroundColor: '#ADD8E6' }} className="text-white p-4">
           <Container>
             <Row>
               <Col md={4} className="mb-3 mb-md-0 text-center">
