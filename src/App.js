@@ -116,7 +116,16 @@ function App() {
 
   return (
     <Router>
-      <div className="baby-shop" style={{ backgroundColor: '#FDEEF4', minHeight: '100vh' }}>
+      <div
+        className="baby-shop"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/background.jpeg)`, // Caminho para a imagem de fundo
+          backgroundSize: 'cover', // Faz a imagem cobrir toda a área
+          backgroundPosition: 'center', // Centraliza a imagem
+          backgroundRepeat: 'no-repeat', // Evita repetição da imagem
+          minHeight: '100vh', // Garante que o fundo cubra toda a altura da tela
+        }}
+      >
         {/* Banner Section */}
         <div className="mb-4">
           <img
