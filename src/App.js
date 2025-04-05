@@ -157,7 +157,14 @@ function App() {
         {/* Navbar */}
         <Navbar bg="light" expand="lg" sticky="top" className="mb-4">
           <Container>
-            <Navbar.Brand href="#home">BabyStore</Navbar.Brand>
+            <Navbar.Brand href="#home">
+              <img
+                src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
+                alt="Bebê a Bordo"
+                style={{ width: '50px', height: '50px', marginRight: '10px' }}
+              />
+              Bebê a Bordo
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -304,7 +311,7 @@ function App() {
           <Container>
             <Row>
               <Col md={4} className="mb-3 mb-md-0">
-                <h5>BabyStore</h5>
+                <h5>Bebê a Bordo</h5>
                 <p>A melhor loja para seu bebê.</p>
                 <div className="d-flex align-items-center">
                   <Phone size={20} className="me-2" />
@@ -315,13 +322,13 @@ function App() {
                 <h5>Atendimento</h5>
                 <p>Segunda a Sexta: 9h às 18h</p>
                 <p>Sábado: 9h às 13h</p>
-                <p>contato@babystore.com</p>
+                <p>contato@bebeabordo.com</p>
               </Col>
               <Col md={4}>
                 <h5>Formas de Pagamento</h5>
                 <div className="payment-methods">
                   <img 
-                    src="https://picsum.photos/200/50?random=11" 
+                    src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
                     alt="Formas de Pagamento" 
                     className="img-fluid" 
                   />
@@ -330,7 +337,7 @@ function App() {
             </Row>
             <hr className="my-4" />
             <div className="text-center">
-              <p>&copy; 2025 BabyStore - Todos os direitos reservados</p>
+              <p>&copy; 2025 Bebê a Bordo - Todos os direitos reservados</p>
               <p>Desenvolvido por Maria Ariel e Matheus Medeiros</p>
             </div>
           </Container>
