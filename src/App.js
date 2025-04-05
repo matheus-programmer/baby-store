@@ -117,6 +117,16 @@ function App() {
   return (
     <Router>
       <div className="baby-shop" style={{ backgroundColor: '#FDEEF4', minHeight: '100vh' }}>
+        {/* Banner Section */}
+        <div className="mb-4">
+          <img
+            className="d-block w-100"
+            src={`${process.env.PUBLIC_URL}/carrossel_1.png`} // Caminho para o banner
+            alt="Promoção de Lançamento"
+            style={{ maxHeight: '400px', objectFit: 'cover' }} // Ajusta a altura e mantém a proporção
+          />
+        </div>
+
         {/* Carousel Section */}
         <Carousel className="mb-4">
           <Carousel.Item>
