@@ -301,7 +301,7 @@ function App() {
               </Col>
               <Col md={6}>
                 <img 
-                  src="https://picsum.photos/500/300?random=10" 
+                  src={`${process.env.PUBLIC_URL}/sobre_nos.png`} 
                   alt="Nossa História" 
                   className="img-fluid rounded" 
                 />
