@@ -220,7 +220,13 @@ function App() {
           </section>
 
           {/* Catalog Section */}
-          <section id="catalog" className="mb-5">
+          <section
+            id="catalog"
+            className="mb-5 p-4 rounded"
+            style={{
+              backgroundColor: '#FDEEF4', // Cor de fundo igual ao Navbar
+            }}
+          >
             <h2 className="text-center mb-4">Nosso Catálogo</h2>
             <Row>
               {products.map(product => (
