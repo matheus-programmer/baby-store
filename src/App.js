@@ -121,7 +121,7 @@ function App() {
         <div className="mb-4">
           <img
             className="d-block w-100"
-            src={`${process.env.PUBLIC_URL}/banner.jpeg`} // Caminho para o banner
+            src={`${process.env.PUBLIC_URL}/banner.png`} // Caminho para o banner
             alt="Promoção de Lançamento"
             style={{ maxHeight: '400px', objectFit: 'cover' }} // Ajusta a altura e mantém a proporção
           />
