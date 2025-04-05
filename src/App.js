@@ -166,7 +166,7 @@ function App() {
               <img
                 src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
                 alt="Bebê a Bordo"
-                style={{ width: '50px', height: '50px', marginRight: '10px' }}
+                style={{ width: '100px', height: '100px', marginRight: '10px', borderRadius: '50%' }} // Estilo da logo
               />
               Bebê a Bordo
             </Navbar.Brand>
@@ -572,7 +572,7 @@ function App() {
                 <img
                   src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
                   alt="Bebê a Bordo"
-                  style={{ width: '100px', height: '100px', marginBottom: '10px' }}
+                  style={{ width: '100px', height: '100px', marginBottom: '10px', borderRadius: '50%' }} // Estilo da logo
                 />
                 <h5>Bebê a Bordo</h5>
                 <p>A melhor loja para seu bebê.</p>
