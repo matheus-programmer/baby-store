@@ -119,7 +119,7 @@ function App() {
       <div
         className="baby-shop"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/background.jpeg)`, // Caminho para a imagem de fundo
+          backgroundColor: '#E3F2FD', // Cor de fundo azul bebê
           backgroundSize: '100% auto', // Ajusta a largura para 100% e mantém a proporção
           backgroundPosition: 'top', // Começa a partir do topo
           backgroundRepeat: 'repeat-y', // Repete a imagem apenas na direção vertical
