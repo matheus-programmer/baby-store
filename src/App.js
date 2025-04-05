@@ -141,8 +141,8 @@ function App() {
             src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho para a logo
             alt="Bebê a Bordo"
             style={{
-              width: '100px', // Aumenta a largura da logo
-              height: '100px', // Aumenta a altura da logo
+              width: window.innerWidth > 768 ? '250px' : '100px', // 250px para desktop, 100px para mobile
+              height: window.innerWidth > 768 ? '250px' : '100px', // 250px para desktop, 100px para mobile
               borderRadius: '50%', // Torna a logo circular
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Adiciona uma sombra para destaque
             }}
