@@ -123,7 +123,7 @@ function App() {
             className="d-block w-100"
             src={`${process.env.PUBLIC_URL}/banner.png`} // Caminho para o banner
             alt="Promoção de Lançamento"
-            style={{ maxHeight: '400px', objectFit: 'cover' }} // Ajusta a altura e mantém a proporção
+            style={{ width: '100%', height: '100vh', objectFit: 'cover' }} // Ocupa toda a altura da tela
           />
         </div>
 
