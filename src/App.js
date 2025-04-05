@@ -121,48 +121,11 @@ function App() {
         <div className="mb-4">
           <img
             className="d-block w-100"
-            src={`${process.env.PUBLIC_URL}/carrossel_1.png`} // Caminho para o banner
+            src={`${process.env.PUBLIC_URL}/carrossel.png`} // Caminho para o banner
             alt="Promoção de Lançamento"
             style={{ maxHeight: '400px', objectFit: 'cover' }} // Ajusta a altura e mantém a proporção
           />
         </div>
-
-        {/* Carousel Section */}
-        <Carousel className="mb-4">
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={`${process.env.PUBLIC_URL}/carrossel_1.png`}
-              alt="Promoção de Lançamento"
-            />
-            <Carousel.Caption>
-              <h3>Novidades para o seu bebê</h3>
-              <p>Conheça nossa nova coleção de roupas e acessórios</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://picsum.photos/1200/400?random=2"
-              alt="Descontos Especiais"
-            />
-            <Carousel.Caption>
-              <h3>Até 35% de desconto</h3>
-              <p>Promoção por tempo limitado em produtos selecionados</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://picsum.photos/1200/400?random=3"
-              alt="Kits para Presente"
-            />
-            <Carousel.Caption>
-              <h3>Kits para Presente</h3>
-              <p>Opções perfeitas para presentear</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
 
         {/* Navbar */}
         <Navbar style={{ backgroundColor: '#ADD8E6' }} expand="lg" sticky="top" className="mb-4">
