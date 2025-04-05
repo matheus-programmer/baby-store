@@ -124,8 +124,31 @@ function App() {
           backgroundPosition: 'top', // Começa a partir do topo
           backgroundRepeat: 'repeat-y', // Repete a imagem apenas na direção vertical
           minHeight: '100vh', // Garante que o fundo cubra toda a altura da tela
+position: 'relative', // Define o contexto de posicionamento para elementos filhos
         }}
       >
+{/* Logo Flutuante */}
+        <div
+          style={{
+            position: 'absolute', // Posiciona a logo de forma flutuante
+            top: '20px', // Ajusta a distância do topo
+            left: '50%', // Centraliza horizontalmente
+            transform: 'translateX(-50%)', // Ajusta para centralizar corretamente
+            zIndex: 10, // Garante que a logo fique acima do banner
+          }}
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho para a logo
+            alt="Bebê a Bordo"
+            style={{
+              width: '100px', // Largura da logo
+              height: '100px', // Altura da logo
+              borderRadius: '50%', // Torna a logo circular
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Adiciona uma sombra para destaque
+            }}
+          />
+        </div>
+
         {/* Banner Section */}
         <div className="mb-4">
           <img
@@ -145,7 +168,17 @@ function App() {
                 alt="Bebê a Bordo"
                 style={{ width: '50px', height: '50px', marginRight: '10px' }}
               />
-              Bebê a Bordo
+    <img
+                src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
+                alt="Bebê a Bordo"
+                style={{ width: '50px', height: '50px', marginRight: '10px' }}
+              />
+<img
+                src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
+                alt="Bebê a Bordo"
+                style={{ width: '50px', height: '50px', marginRight: '10px' }}
+              />
+          Bebê a Bordo
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -231,7 +264,15 @@ function App() {
             <Row>
               {products.map(product => (
                 <Col key={product.id} lg={4} md={6} className="mb-4">
-                  <Card className="h-100">
+                  <Card 
+                    className="h-100"
+                    style={{
+                      backgroundColor: '#E3F2FD', // Cor de fundo azul bebê
+                      border: 'none', // Remove a borda padrão do card
+                      borderRadius: '10px', // Adiciona bordas arredondadas
+                      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Adiciona uma sombra leve
+                    }}
+                  >
                     <Card.Img variant="top" src={product.image} />
                     <Card.Body>
                       <Card.Title>{product.name}</Card.Title>
