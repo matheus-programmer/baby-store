@@ -332,6 +332,7 @@ function App() {
                     src={`${process.env.PUBLIC_URL}/formas_pagamento.png`} 
                     alt="Formas de Pagamento" 
                     className="img-fluid" 
+                    style={{ maxWidth: '150px', height: 'auto' }} // Reduzindo a largura e mantendo proporções
                   />
                 </div>
               </Col>
