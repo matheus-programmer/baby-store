@@ -46,23 +46,23 @@ function App() {
     },
     {
       id: 4,
-      name: 'Body Manga Longa',
+      name: 'Pijama Stitch Infantil Manga Longa - Azul',
       price: 49.90,
-      image: 'https://picsum.photos/300/300?random=4',
-      description: 'Body de manga longa em algodão pima para maior conforto.'
+      image: `${process.env.PUBLIC_URL}/produto_4.jpeg`,
+      description: 'Pijama de manga longa em algodão pima para maior conforto.'
     },
     {
       id: 5,
       name: 'Meia Bebê Kit com 3',
       price: 29.90,
-      image: 'https://picsum.photos/300/300?random=5',
+      image: `${process.env.PUBLIC_URL}/produto_5.jpeg`,
       description: 'Kit com 3 meias para bebê em cores sortidas.'
     },
     {
       id: 6,
       name: 'Toalha com Capuz',
       price: 59.90,
-      image: 'https://picsum.photos/300/300?random=6',
+      image: `${process.env.PUBLIC_URL}/produto_6.jpeg`,
       description: 'Toalha de banho com capuz para bebês, extra macia.'
     }
   ];
