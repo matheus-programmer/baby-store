@@ -120,9 +120,9 @@ function App() {
         className="baby-shop"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/background.jpeg)`, // Caminho para a imagem de fundo
-          backgroundSize: 'cover', // Faz a imagem cobrir toda a área
-          backgroundPosition: 'center', // Centraliza a imagem
-          backgroundRepeat: 'no-repeat', // Evita repetição da imagem
+          backgroundSize: '100% auto', // Ajusta a largura para 100% e mantém a proporção
+          backgroundPosition: 'top', // Começa a partir do topo
+          backgroundRepeat: 'repeat-y', // Repete a imagem apenas na direção vertical
           minHeight: '100vh', // Garante que o fundo cubra toda a altura da tela
         }}
       >
