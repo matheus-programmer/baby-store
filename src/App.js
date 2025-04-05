@@ -310,13 +310,14 @@ function App() {
         <footer id="footer" className="bg-dark text-white p-4">
           <Container>
             <Row>
-              <Col md={4} className="mb-3 mb-md-0">
+              <Col md={4} className="mb-3 mb-md-0 text-center">
+                <img
+                  src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
+                  alt="Bebê a Bordo"
+                  style={{ width: '100px', height: '100px', marginBottom: '10px' }}
+                />
                 <h5>Bebê a Bordo</h5>
                 <p>A melhor loja para seu bebê.</p>
-                <div className="d-flex align-items-center">
-                  <Phone size={20} className="me-2" />
-                  <span>(00) 12345-6789</span>
-                </div>
               </Col>
               <Col md={4} className="mb-3 mb-md-0">
                 <h5>Atendimento</h5>
@@ -328,7 +329,7 @@ function App() {
                 <h5>Formas de Pagamento</h5>
                 <div className="payment-methods">
                   <img 
-                    src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
+                    src="https://picsum.photos/200/50?random=11" 
                     alt="Formas de Pagamento" 
                     className="img-fluid" 
                   />
