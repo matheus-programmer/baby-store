@@ -209,7 +209,7 @@ function App() {
               <Col md={4} className="text-center mb-3 mb-md-0">
                 <div className="feature-icon mb-2">
                   <img 
-                    src={`${process.env.PUBLIC_URL}/algodão.jpeg`} 
+                    src="https://picsum.photos/80/80?random=7" 
                     alt="Algodão Premium" 
                     className="rounded-circle" 
                   />
@@ -301,7 +301,7 @@ function App() {
               </Col>
               <Col md={6}>
                 <img 
-                  src={`${process.env.PUBLIC_URL}/sobre_nos.jpeg`} 
+                  src={`${process.env.PUBLIC_URL}/sobre_nos.`} 
                   alt="Nossa História" 
                   className="img-fluid rounded" 
                 />
