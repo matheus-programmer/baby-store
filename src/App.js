@@ -124,10 +124,10 @@ function App() {
           backgroundPosition: 'top', // Começa a partir do topo
           backgroundRepeat: 'repeat-y', // Repete a imagem apenas na direção vertical
           minHeight: '100vh', // Garante que o fundo cubra toda a altura da tela
-position: 'relative', // Define o contexto de posicionamento para elementos filhos
+          position: 'relative', // Define o contexto de posicionamento para elementos filhos
         }}
       >
-{/* Logo Flutuante */}
+        {/* Logo Flutuante */}
         <div
           style={{
             position: 'absolute', // Posiciona a logo de forma flutuante
@@ -168,17 +168,7 @@ position: 'relative', // Define o contexto de posicionamento para elementos filh
                 alt="Bebê a Bordo"
                 style={{ width: '50px', height: '50px', marginRight: '10px' }}
               />
-    <img
-                src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
-                alt="Bebê a Bordo"
-                style={{ width: '50px', height: '50px', marginRight: '10px' }}
-              />
-<img
-                src={`${process.env.PUBLIC_URL}/logo.jpg`} // Caminho correto para a logo
-                alt="Bebê a Bordo"
-                style={{ width: '50px', height: '50px', marginRight: '10px' }}
-              />
-          Bebê a Bordo
+              Bebê a Bordo
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
